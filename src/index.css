@@ -1,0 +1,20 @@
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   background-color: hsl(350, 100%, 95%);
+}
+
+button {
+   padding: .5em 1em;
+   border-radius: .5em;
+   cursor: pointer;
+   transition: opacity 100ms ease-in-out;
+}
+
+button:hover, button:focus-visible {
+   opacity: .7;
+}

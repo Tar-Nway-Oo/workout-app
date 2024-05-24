@@ -1,0 +1,38 @@
+.header {
+   padding: 1em;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.left-side {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.title {
+   font-size: 2.2rem;
+}
+
+.sub-title {
+   font-size: 1.5rem;
+   color: hsl(0, 59%, 31%);
+}
+
+.explore-btn {
+   background-color: hsl(0, 60%, 61%);
+   color: hsl(0, 0%, 100%);
+}
+
+.header-img {
+   max-width: 700px;
+   border-radius: 1em;
+}
+
+@media (max-width: 1000px) {
+   .header-img {
+      display: none;
+   }
+}
+
