@@ -8,11 +8,13 @@
 .left-side {
    display: flex;
    flex-direction: column;
+   justify-content: flex-start;
    align-items: center;
 }
 
 .title {
    font-size: 2.2rem;
+   margin: 0;
 }
 
 .sub-title {
@@ -20,14 +22,65 @@
    color: hsl(0, 59%, 31%);
 }
 
-.explore-btn {
-   background-color: hsl(0, 60%, 61%);
-   color: hsl(0, 0%, 100%);
-}
-
 .header-img {
    max-width: 700px;
    border-radius: 1em;
+}
+
+.muscle-card-container {
+   padding: 1em;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
+   justify-content: center;
+   gap: 2em;
+}
+
+.muscle-card {
+   text-decoration: none;
+   color: hsl(0, 0%, 0%);
+   box-shadow: 0 0 5px 1px hsl(0, 0%, 50%);
+   border-radius: .3em;
+   transition: 100ms box-shadow ease-in-out;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.muscle-card:hover, .muscle-card:focus {
+   box-shadow: 0 0 10px 1px hsl(0, 0%, 50%);
+}
+
+.muscle-card > img {
+   max-width: 100px;
+}
+
+.muscle-card > p {
+   font-size: 1.2rem;
+}
+
+.exercise-card-container {
+   padding: 1em;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   justify-content: center;
+   gap: 1em;
+}
+
+.exercise-card {
+   padding: 1em;
+   background-color: hsl(0, 0%, 100%);
+   color: hsl(0, 0%, 0%);
+   box-shadow: 0 0 3px 1px hsl(0, 0%, 50%);
+   border-radius: .3em;
+}
+
+.exercise-name {
+   font-size: 1.2rem;
+}
+
+.instructions > li {
+  line-height: 1.5em;
 }
 
 @media (max-width: 1000px) {
