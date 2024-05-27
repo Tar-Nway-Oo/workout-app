@@ -8,7 +8,7 @@ type MuscleCardProps = {
 
 export default function MusclesCard({muscle}: MuscleCardProps) {
   return (
-    <Link to={`${muscle}`} className="muscle-card">
+    <Link to={muscle} className="muscle-card">
       <img src={dumbBellImg} alt="dumb-bell" />
       <p>{muscle}</p>
     </Link>

@@ -35,9 +35,11 @@
    gap: 2em;
 }
 
-.muscle-card {
+.muscle-card, .exercise-card {
+   padding: 1em;
    text-decoration: none;
    color: hsl(0, 0%, 0%);
+   background-color: hsl(0, 0%, 100%);
    box-shadow: 0 0 5px 1px hsl(0, 0%, 50%);
    border-radius: .3em;
    transition: 100ms box-shadow ease-in-out;
@@ -47,11 +49,11 @@
    align-items: center;
 }
 
-.muscle-card:hover, .muscle-card:focus {
+.muscle-card:hover, .exercise-card:hover {
    box-shadow: 0 0 10px 1px hsl(0, 0%, 50%);
 }
 
-.muscle-card > img {
+.muscle-card > img, .exercise-card > img {
    max-width: 100px;
 }
 
@@ -59,29 +61,48 @@
    font-size: 1.2rem;
 }
 
+.no-exercises {
+   text-align: center;
+   margin-top: 7em;
+   font-size: 2rem;
+   color: hsl(0, 0%, 50%);
+}
+
+.exercise-heading {
+   text-align: center;
+   font-size: 1.8rem;
+}
+
 .exercise-card-container {
    padding: 1em;
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
    justify-content: center;
    gap: 1em;
-}
-
-.exercise-card {
-   padding: 1em;
-   background-color: hsl(0, 0%, 100%);
-   color: hsl(0, 0%, 0%);
-   box-shadow: 0 0 3px 1px hsl(0, 0%, 50%);
-   border-radius: .3em;
 }
 
 .exercise-name {
    font-size: 1.2rem;
 }
 
-.instructions > li {
-  line-height: 1.5em;
+.exercise-detail {
+   padding: 1em;
+   margin: auto;
+   max-width: 700px;  
 }
+
+.name {
+   font-size: 1.3rem;
+   text-align: center;
+}
+
+.bold-text {
+   font-weight: bold;
+}
+
+.instructions > li {
+   line-height: 2em;
+ }
 
 @media (max-width: 1000px) {
    .header-img {

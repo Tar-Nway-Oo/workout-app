@@ -10,11 +10,16 @@ export default function Exercises() {
 
    const selectedExercises = exercises.filter(exercise => exercise.primaryMuscles.includes(muscle));
 
+   if (selectedExercises.length === 0) return <p className="no-exercises">No exercises for {muscle}</p>
+
   return (
-    <div className="exercise-card-container">
-      {selectedExercises.map(exercise => (
-        <ExerciseCard key={exercise.id} exercise={exercise} />
-      ))}
+    <div>
+      <h2 className="exercise-heading">Exercises for {muscle}</h2>
+      <div className="exercise-card-container">
+        {selectedExercises.map(exercise => (
+          <ExerciseCard key={exercise.id} id={exercise.id} name={exercise.name} />
+        ))}
+      </div>
     </div>
   )
 }
