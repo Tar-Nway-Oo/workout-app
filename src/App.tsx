@@ -9,7 +9,7 @@ export default function App() {
        <Route path="/">
          <Route index element={<Home />} />
          <Route path=":muscle" element={<Exercises />} />
-         <Route path=":muscle/:id" element={<ExerciseDetails />} />
+          <Route path=":muscle/:id" element={<ExerciseDetails />} />
        </Route>
     </Routes>
   )

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import exercises from "../data/exercises.json"
 import ExerciseCard from "../components/ExerciseCard";
+import NotFound from "./NotFound";
 import "../App.css"
 
 export default function Exercises() {
@@ -10,7 +11,7 @@ export default function Exercises() {
 
    const selectedExercises = exercises.filter(exercise => exercise.primaryMuscles.includes(muscle));
 
-   if (selectedExercises.length === 0) return <p className="no-exercises">No exercises for {muscle}</p>
+   if (selectedExercises.length === 0) return <NotFound text={`No exercises for ${muscle}`} />;
 
   return (
     <div>

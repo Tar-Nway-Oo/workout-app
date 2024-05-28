@@ -1,3 +1,13 @@
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   background-color: hsl(120, 100%, 95%);
+}
+
 .header {
    padding: 1em;
    display: flex;
@@ -61,7 +71,7 @@
    font-size: 1.2rem;
 }
 
-.no-exercises {
+.not-found-text {
    text-align: center;
    margin-top: 7em;
    font-size: 2rem;

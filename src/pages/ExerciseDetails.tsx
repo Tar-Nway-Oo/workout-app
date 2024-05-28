@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import exercises from "../data/exercises.json"
+import NotFound from "./NotFound";
 import "../App.css"
 
 export default function ExerciseDetails() {
@@ -8,7 +9,7 @@ export default function ExerciseDetails() {
   if (id == null) return;
 
   const selectedExercise = exercises.find(exercise => exercise.id === id);
-  if (selectedExercise == null) return;
+  if (selectedExercise == null) return <NotFound text="No exercises" />;
 
   const {name, category, level, equipment, primaryMuscles, secondaryMuscles, instructions} = selectedExercise;
 
